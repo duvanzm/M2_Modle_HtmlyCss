@@ -1,49 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-<h1>Duvan A. Zuluaga</h1>
-<nav>
-<ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="mascotas.html">Mis Mascotas</a></li>
-<li><a href="#Sobre-mí">Sobre mí</a></li>
-<li><a href="#Proyectos">Proyectos</a></li>
-<li><a href="#Contacto">Contacto</a></li>
-</ul>
-</nav>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <h1 class="nav__title">Duvan A. Zuluaga</h1>
+      <ul class="nav__ul">
+        <li class="nav__li">
+          <a class="nav__a" href="index.html">Inicio</a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="mascotas.html">Mis Mascotas</a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="#Sobre-mí">Sobre mí</a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="#Proyectos">Proyectos</a>
+        </li>
+        <li class="nav__li">
+          <a class="nav__a" href="#Contacto">Contacto</a>
+        </li>
+      </ul>
+    </nav>
 
+    <section class="section">
+      <h2 class="section__title">Sobre mí</h2>
+      <p class="section__p">
+        Hola, soy Duvan Zuluaga. Me gusta el desarrollo web y este es mi
+        portafolio básico hecho con HTML y CSS.
+      </p>
+    </section>
 
-<section id="about-me">
-<h2>Sobre mí</h2>
-<p>Hola, soy Duvan Zuluaga. Me gusta el desarrollo web y este es mi portafolio básico hecho con HTML y CSS.</p>
-</section>
+    <section class="section">
+      <h2 class="section__title">Proyectos</h2>
+      <ul class="section__ul">
+        <li class="section__li">
+          <a class="section__a" href="#Proyecto-1">Proyecto 1</a>
+        </li>
+        <li class="section__li">
+          <a class="section__a" href="#Proyecto-2">Proyecto 2</a>
+        </li>
+        <li class="section__li">
+          <a class="section__a" href="#Proyecto-3">Proyecto 3</a>
+        </li>
+      </ul>
+    </section>
 
-
-<section id="proyect">
-<h2>Proyectos</h2>
-<ul>
-<li><a href="#Proyecto-1">Proyecto 1</a></li>
-<li><a href="#Proyecto-2">Proyecto 2</a></li>
-<li><a href="#Proyecto-3">Proyecto 3</a></li>
-</ul>
-</section>
-
-
-<section id="contact">
-<h2>Contacto</h2>
-<form>
-<input type="text" placeholder="Tu nombre" required>
-<input type="email" placeholder="Tu correo" required>
-<button type="submit">Enviar</button>
-</form>
-</section>
-</body>
+    <section class="section">
+      <h2 class="section__title">Contacto</h2>
+      <form class="section__form">
+        <input
+          class="section__input"
+          type="text"
+          placeholder="Tu nombre"
+          required
+        />
+        <input
+          class="section__input"
+          type="email"
+          placeholder="Tu correo"
+          required
+        />
+        <button class="section__button" type="submit">Enviar</button>
+      </form>
+    </section>
+  </body>
 </html>
