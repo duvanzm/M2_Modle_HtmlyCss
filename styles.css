@@ -1,136 +1,134 @@
 /* Estilo general de toda la pagina */
 body {
-/* cambia la letra de toda la página. */
-font-family: Arial, sans-serif;
-/* quitan el margen y el espacio por defecto del navegador. */
-margin: 0;
-padding: 0;
-/* color de fondo. */
-background: #f4f4f4;
-/* color del texto. */
-color: #333333;
+  /* cambia la letra de toda la página. */
+  font-family: Arial, sans-serif;
+  /* quitan el margen y el espacio por defecto del navegador. */
+  margin: 0;
+  padding: 0;
+  /* color de fondo. */
+  background: #f4f4f4;
+  /* color del texto. */
+  color: #333333;
 }
 
 /* Estilo general de todo el header */
+/* Header y navegación con flexbox */
 header {
-background: #333;
-color: #fff;
-/* espacio interno para que no quede apretado. */
-padding: 20px;
-/* centra el texto. */
-text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #333;
+  color: #fff;
+  /* espacio interno para que no quede apretado. */
+  padding: 20px;
+  /* centra el texto. */
 }
-
 
 nav ul {
-/* Quita los puntos de las listas */
-list-style: none;
-/* Elimina espacios extra */
-padding: 0;
+  /*hace que los elementos hijos (nav ul li) se alineen horizontalmente */
+  display: flex;
+  /* Quita los puntos de las listas */
+  list-style: none;
+  /* Elimina espacios extra */
+  padding: 0;
 }
-
 
 nav ul li {
-/* coloca los elementos del menú en fila. */
-display: inline-block; 
-/* espacio entre cada enlace. */
-margin: 0 10px;
+  /* coloca los elementos del menú en fila. */
+  /* display: inline-block; */
+  /* espacio entre cada enlace. */
+  margin: 0 10px;
 }
 
-
-header a, nav a {
-color: #fff;
-/* Quita el subrayado. */
-text-decoration: none;
-/* hace que el cambio sea suave. */
-transition: 0.3s;
+header a,
+nav a {
+  color: #fff;
+  /* Quita el subrayado. */
+  text-decoration: none;
+  /* hace que el cambio sea suave. */
+  transition: 0.3s;
 }
 
 /* Cambia el color al pasar el mouse */
 nav a:hover {
-color: #ffae00;
+  color: #ffae00;
 }
 
 header a:hover {
-color: #ffae00;
+  color: #ffae00;
 }
 
 section {
-/* espacio interior. */
-padding: 20px;
-/* separación entre secciones. */
-margin: 20px;
-/* caja blanca. */
-background: white;
-/* bordes redondeados. */
-border-radius: 10px;
-/* sombra suave. */
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  /* espacio interior. */
+  padding: 20px;
+  /* separación entre secciones. */
+  margin: 20px;
+  /* caja blanca. */
+  background: white;
+  /* bordes redondeados. */
+  border-radius: 10px;
+  /* sombra suave. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 form input {
-/* Cada input ocupa toda la línea     */
-display: block;
-/* da espacio interno. */
-margin: 10px 0;
-/* separa los campos. */
-padding: 10px;
-/* se ajusta al ancho de la sección. */
-width: 100%;
+  /* Cada input ocupa toda la línea     */
+  display: block;
+  /* da espacio interno. */
+  margin: 10px 0;
+  /* separa los campos. */
+  padding: 10px;
+  /* se ajusta al ancho de la sección. */
+  width: 100%;
 }
 
-
 form button {
-
-padding: 10px 20px;
-/* cambia el cursor. */
-cursor: pointer;
-border: none;
-background: #333;
-color: white;
-/* bordes redondeados. */
-border-radius: 5px;
+  padding: 10px 20px;
+  /* cambia el cursor. */
+  cursor: pointer;
+  border: none;
+  background: #333;
+  color: white;
+  /* bordes redondeados. */
+  border-radius: 5px;
 }
 
 /* Cambia de color al pasar el mouse. */
 form button:hover {
-    background: #555;
+  background: #555;
 }
 
 .galeria {
-    width: auto;
-/* Usa flexbox para poner las imágenes una al lado de la otra.     */
-    display: flex;
-/* centra la galería.     */
-    justify-content: center;
-/* espacio entre imágenes. */
-    gap: 20px;
+  width: auto;
+  /* Usa flexbox para poner las imágenes una al lado de la otra.     */
+  display: flex;
+  /* centra la galería.     */
+  justify-content: center;
+  /* espacio entre imágenes. */
+  gap: 20px;
 }
 
-
 .galeria img {
-    
-/* Define el ancho fijo de cada imagen     */
-    width: 300px;
-/* Define el alto fijo de cada imagen     */
-    height: 600px;
-/* Redondea las esquinas de la imagen.     */
-    border-radius: 10px;
-/* Agrega una sombra alrededor de la imagen.     */
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-/* Hace la animación suave, no brusca.     */
-    transition: 0.3s;
+  /* Define el ancho fijo de cada imagen     */
+  width: 300px;
+  /* Define el alto fijo de cada imagen     */
+  height: 600px;
+  /* Redondea las esquinas de la imagen.     */
+  border-radius: 10px;
+  /* Agrega una sombra alrededor de la imagen.     */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Hace la animación suave, no brusca.     */
+  transition: 0.3s;
 }
 
 /* Efecto de zoom al pasar el mouse. */
 .galeria img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Estilo de texto de img */
 .galeria p {
-    width: 300px;
-    margin-top: 10px;
-    
+  width: 300px;
+  margin-top: 10px;
 }
