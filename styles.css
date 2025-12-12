@@ -1,3 +1,4 @@
+/* Defino estilos para toda la pagina*/
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +6,16 @@
 }
 
 /* Navegación con flexbox:*/
+/* ------------------------------------------------ */
 .nav {
   display: flex; /* Flexbox activo */
   justify-content: center; /* Centra horizontalmente los items*/
   align-items: center; /* Centra verticalmente los items*/
   flex-direction: column; /* alinea los items en coluna*/
-  background: #242323;
-  color: #ffffff;
+  padding: 20px 40px; /* Espacio /arriba y abajo/ y /izquierda y derecha/ */
+  background: rgb(88, 83, 83);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
 }
 
 .nav__ul {
@@ -20,14 +24,94 @@
   gap: 20px; /* Espacio entre elementos*/
 }
 
-.nav__li {
-}
-
 .nav__a {
   text-decoration: none; /* Quita el subrayado */
   color: aliceblue;
   transition: 0.3s;
+  font-weight: bold; /* texto en negrita */
 }
 .nav__a:hover {
   color: #ffcc00;
+}
+
+/* Index -- Main o Contenido Principal Con Grid Layoud */
+/* --------------------------------------------------- */
+.section {
+  display: grid; /* Grid activo*/
+  grid-template-rows: auto; /* Defino una fila y el tamaño sera automatico*/
+  margin: 40px 40px; /* Espacio /arriba y abajo/ y /izquierda y derecha/ */
+  padding: 20px 40px; /* Espacio /arriba y abajo/ y /izquierda y derecha/ */
+  background: whitesmoke;
+  gap: 20px; /* Crea separación entre los elementos hijos de un contenedor */
+  border-radius: 10px;
+}
+
+.section__title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.section__ul {
+  list-style: none;
+}
+
+.section__a {
+  text-decoration: none; /* Quita el subrayado */
+  color: #050505;
+}
+
+.section__a:hover {
+  color: green;
+}
+
+/* Section del form Centrado*/
+.section--center {
+  display: grid; /* Grid activo*/
+  grid-template-rows: auto; /* Defino una fila y el tamaño sera automatico*/
+  justify-content: center;
+  margin: 40px 40px; /* Espacio /arriba y abajo/ y /izquierda y derecha/ */
+  padding: 20px 40px; /* Espacio /arriba y abajo/ y /izquierda y derecha/ */
+  background: whitesmoke;
+  gap: 20px; /* Crea separación entre los elementos hijos de un contenedor */
+  border-radius: 10px;
+}
+
+.section__form {
+  display: grid;
+  justify-content: center;
+  width: 50%; /* Ancho del contenedor*/
+  grid-template-columns: 3fr; /* una sola columna que ocupa o divide 3fr  */
+  padding: 20px;
+  justify-items: center; /* Los items se mueven hacia el centro horizontal.*/
+  gap: 20px; /* Crea separación entre los elementos hijos de un contenedor */
+}
+
+.section__button {
+  padding: 3px 8px;
+}
+
+.section__button:hover {
+  color: green;
+}
+
+/* mascotas Main o Contenido Principal Con Grid Layoud */
+/* ------------------------ */
+
+.section__article {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px;
+  gap: 40px;
+}
+
+.section__imgContainer {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #dbd8d4;
+}
+
+.section__img {
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
 }
