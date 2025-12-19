@@ -1,136 +1,138 @@
-/* Estilo general de toda la pagina */
-body {
-/* cambia la letra de toda la página. */
-font-family: Arial, sans-serif;
-/* quitan el margen y el espacio por defecto del navegador. */
-margin: 0;
-padding: 0;
-/* color de fondo. */
-background: #f4f4f4;
-/* color del texto. */
-color: #333333;
+/* Defino estilos para toda la pagina*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilo general de todo el header */
-header {
-background: #333;
-color: #fff;
-/* espacio interno para que no quede apretado. */
-padding: 20px;
-/* centra el texto. */
-text-align: center;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-
-nav ul {
-/* Quita los puntos de las listas */
-list-style: none;
-/* Elimina espacios extra */
-padding: 0;
+/* Navbar*/
+/* ------------------------------------------------ */
+.cajas {
+  background: white;
+  /* bordes redondeados. */
+  border-radius: 10px;
+  /* sombra suave. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  height: 10vh;
+  background: #333;
+  color: #fff;
+}
+.nav .nav-content {
+  grid-column: 2;
+  text-align: center;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 10px;
+}
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.menu a:hover {
+  color: #ffae00;
+}
+/* Main */
+.main {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  margin: 20px;
+}
+.main .about {
+  grid-row: 1;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+.main .proyects {
+  grid-row: 2;
+  grid-column: 2;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+.proyects a {
+  text-decoration: none;
+  color: orangered;
+}
+.list-proyect {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 80px;
+  padding: 20px;
+}
+.list-proyect {
+  list-style: none;
+}
+.main .contact {
+  margin: 20px;
+  grid-row: 3;
+  grid-column: 2;
 }
 
-
-nav ul li {
-/* coloca los elementos del menú en fila. */
-display: inline-block; 
-/* espacio entre cada enlace. */
-margin: 0 10px;
+.form {
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+  padding: 20px;
+  width: 100%;
 }
-
-
-header a, nav a {
-color: #fff;
-/* Quita el subrayado. */
-text-decoration: none;
-/* hace que el cambio sea suave. */
-transition: 0.3s;
+.form .input {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
 }
-
-/* Cambia el color al pasar el mouse */
-nav a:hover {
-color: #ffae00;
+.form button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
 }
-
-header a:hover {
-color: #ffae00;
+.form button:hover {
+  background: #555;
 }
+/* . Media queries:
 
-section {
-/* espacio interior. */
-padding: 20px;
-/* separación entre secciones. */
-margin: 20px;
-/* caja blanca. */
-background: white;
-/* bordes redondeados. */
-border-radius: 10px;
-/* sombra suave. */
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    Define un media query para móviles (pantallas pequeñas) en el que:
+        El menú de navegación cambie a columna.
+        Los proyectos se organicen en una sola columna.
+        La galería de imágenes se reduzca a 2 columnas.
+    Define un media query para tablets (pantallas medianas) en el que:
+        Los proyectos se organicen en 2 columnas.
+        La galería tenga 3 columnas.
+    En pantallas grandes (escritorio), mantén el layout de 3 o más columnas. */
 
-
-form input {
-/* Cada input ocupa toda la línea     */
-display: block;
-/* da espacio interno. */
-margin: 10px 0;
-/* separa los campos. */
-padding: 10px;
-/* se ajusta al ancho de la sección. */
-width: 100%;
-}
-
-
-form button {
-
-padding: 10px 20px;
-/* cambia el cursor. */
-cursor: pointer;
-border: none;
-background: #333;
-color: white;
-/* bordes redondeados. */
-border-radius: 5px;
-}
-
-/* Cambia de color al pasar el mouse. */
-form button:hover {
-    background: #555;
-}
-
-.galeria {
-    width: auto;
-/* Usa flexbox para poner las imágenes una al lado de la otra.     */
+/* MediaQueries */
+@media (max-width: 750px) {
+  .section__article {
     display: flex;
-/* centra la galería.     */
-    justify-content: center;
-/* espacio entre imágenes. */
-    gap: 20px;
-}
-
-
-.galeria img {
-    
-/* Define el ancho fijo de cada imagen     */
-    width: 300px;
-/* Define el alto fijo de cada imagen     */
-    height: 600px;
-/* Redondea las esquinas de la imagen.     */
-    border-radius: 10px;
-/* Agrega una sombra alrededor de la imagen.     */
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-/* Hace la animación suave, no brusca.     */
-    transition: 0.3s;
-}
-
-/* Efecto de zoom al pasar el mouse. */
-.galeria img:hover {
-    transform: scale(1.05);
-}
-
-/* Estilo de texto de img */
-.galeria p {
-    width: 300px;
-    margin-top: 10px;
-    
+    flex-direction: column;
+    padding: 20px;
+    gap: 40px;
+  }
 }

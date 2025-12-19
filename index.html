@@ -7,43 +7,60 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- navbar -->
     <header>
-      <h1>Duvan A. Zuluaga</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="mascotas.html">Mis Mascotas</a></li>
-          <li><a href="#Sobre-mí">Sobre mí</a></li>
-          <li><a href="#Proyectos">Proyectos</a></li>
-          <li><a href="#Contacto">Contacto</a></li>
-        </ul>
+      <nav class="nav">
+        <div class="nav-content">
+          <h1>Duvan A. Zuluaga</h1>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mascotas.html">Mis Mascotas</a></li>
+            <li><a href="#Sobre-mí">Sobre mí</a></li>
+            <li><a href="#Proyectos">Proyectos</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
-    <section id="about-me">
-      <h2>Sobre mí</h2>
-      <p>
-        Hola, soy Duvan Zuluaga. Me gusta el desarrollo web y este es mi
-        portafolio básico hecho con HTML y CSS.
-      </p>
-    </section>
+    <!-- Main -->
 
-    <section id="proyect">
-      <h2>Proyectos</h2>
-      <ul>
-        <li><a href="#Proyecto-1">Proyecto 1</a></li>
-        <li><a href="#Proyecto-2">Proyecto 2</a></li>
-        <li><a href="#Proyecto-3">Proyecto 3</a></li>
-      </ul>
-    </section>
+    <main>
+      <div class="main">
+        <section class="about cajas">
+          <h2>Sobre mí</h2>
+          <p>
+            Hola, soy Duvan Zuluaga. Me gusta el desarrollo web y este es mi
+            portafolio básico hecho con HTML y CSS.
+          </p>
+        </section>
+        <section class="proyects cajas">
+          <h2>Proyectos</h2>
+          <ul class="list-proyect">
+            <li><a href="#">Proyecto 1</a></li>
+            <li><a href="#">Proyecto 2</a></li>
+            <li><a href="#">Proyecto 3</a></li>
+            <li><a href="#">Proyecto 4</a></li>
+            <li><a href="#">Proyecto 5</a></li>
+            <li><a href="#">Proyecto 6</a></li>
+          </ul>
+        </section>
+        <section class="contact cajas">
+          <form class="form">
+            <h2>Ingresa tus datos:</h2>
+            <input class="input" type="text" placeholder="Tu nombre" required />
+            <input
+              class="input"
+              type="email"
+              placeholder="Tu correo"
+              required
+            />
+            <button class="button" type="submit">Enviar</button>
+          </form>
+        </section>
+      </div>
+    </main>
 
-    <section id="contact">
-      <h2>Contacto</h2>
-      <form>
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu correo" required />
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
