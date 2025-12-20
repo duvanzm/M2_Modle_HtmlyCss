@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaQueries.css"/>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header>
+      <nav class="nav">
+        <div class="nav-content">
+          <h1>Duvan A. Zuluaga</h1>
+          <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mascotas.html">Mis Mascotas</a></li>
+            <li><a href="#Sobre-mí">Sobre mí</a></li>
+            <li><a href="#Proyectos">Proyectos</a></li>
+            <li><a href="#Contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <div class="main">
+        <section class="about cajas">
+          <h2>Sobre mí</h2>
+          <p>
+            Hola, soy Duvan Zuluaga. Me gusta el desarrollo web y este es mi
+            portafolio básico hecho con HTML y CSS.
+          </p>
+        </section>
+        <section class="proyects cajas">
+          <h2>Proyectos</h2>
+          <button class="btn-toggle" id="btnProyectos">Mostrar proyectos</button>
+          <ul class="list-proyect" id="list-Proyects">
+            <li><a href="#">Proyecto 1</a></li>
+            <li><a href="#">Proyecto 2</a></li>
+            <li><a href="#">Proyecto 3</a></li>
+            <li><a href="#">Proyecto 4</a></li>
+            <li><a href="#">Proyecto 5</a></li>
+            <li><a href="#">Proyecto 6</a></li>
+          </ul>
+        </section>
+        <section class="contact cajas">
+          <form class="form">
+            <h2>Ingresa tus datos:</h2>
+            <input class="input" type="text" placeholder="Tu nombre" required />
+            <input
+              class="input"
+              type="email"
+              placeholder="Tu correo"
+              required
+            />
+            <button class="button" type="submit">Enviar</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
