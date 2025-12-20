@@ -1,17 +1,27 @@
 /* Defino estilos para toda la pagina*/
+:root {
+  --color-primary: #4f46e5;
+  --color-secondary: #22c55e;
+  --text-color: #333;
+  --bg-color: #f5f5f5;
+  --font-main: 'Arial', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
+body {
+  font-family: var(--font-main);
+  background: var(--bg-color);
+  color: var(--text-color);
 }
-
+img {
+   width: 100%;
+  height: 300px;
+}
 /* Navbar*/
-/* ------------------------------------------------ */
 .cajas {
   background: white;
   /* bordes redondeados. */
@@ -21,11 +31,11 @@ img {
 }
 .nav {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   justify-items: center;
-  height: 10vh;
+  height: auto;
   background: #333;
   color: #fff;
 }
@@ -34,11 +44,12 @@ img {
   text-align: center;
 }
 .menu {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   list-style: none;
   padding: 10px;
+  white-space: nowrap;
 }
 .menu a {
   color: #fff;
@@ -77,21 +88,35 @@ img {
   text-decoration: none;
   color: orangered;
 }
-.list-proyect {
+.list-proyect.activo {
   display: grid;
   grid-template-columns: repeat(3, auto);
+  list-style: none;
   gap: 80px;
   padding: 20px;
 }
+.btn-toggle {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-toggle:hover {
+  background-color: #0056b3;
+}
+/* OCULTO */
 .list-proyect {
-  list-style: none;
+  display: none;
 }
 .main .contact {
   margin: 20px;
   grid-row: 3;
   grid-column: 2;
 }
-
 .form {
   text-align: center;
   display: block;
@@ -116,23 +141,13 @@ img {
 .form button:hover {
   background: #555;
 }
-/* . Media queries:
-
-    Define un media query para móviles (pantallas pequeñas) en el que:
-        El menú de navegación cambie a columna.
-        Los proyectos se organicen en una sola columna.
-        La galería de imágenes se reduzca a 2 columnas.
-    Define un media query para tablets (pantallas medianas) en el que:
-        Los proyectos se organicen en 2 columnas.
-        La galería tenga 3 columnas.
-    En pantallas grandes (escritorio), mantén el layout de 3 o más columnas. */
-
-/* MediaQueries */
-@media (max-width: 750px) {
-  .section__article {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    gap: 40px;
-  }
+/* Main Mascotas */
+.galeria {
+  padding: 20px 60px;
+}
+.main-pets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 60px;
 }

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaQueries.css"/>
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -22,9 +24,7 @@
         </div>
       </nav>
     </header>
-
     <!-- Main -->
-
     <main>
       <div class="main">
         <section class="about cajas">
@@ -36,7 +36,8 @@
         </section>
         <section class="proyects cajas">
           <h2>Proyectos</h2>
-          <ul class="list-proyect">
+          <button class="btn-toggle" id="btnProyectos">Mostrar proyectos</button>
+          <ul class="list-proyect" id="list-Proyects">
             <li><a href="#">Proyecto 1</a></li>
             <li><a href="#">Proyecto 2</a></li>
             <li><a href="#">Proyecto 3</a></li>
@@ -60,7 +61,6 @@
         </section>
       </div>
     </main>
-
     <script type="module" src="script.js"></script>
   </body>
 </html>
